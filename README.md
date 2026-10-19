@@ -15,3 +15,6 @@ REST API для управления заметками, разработанн�
 - `DataAccess/` — контекст базы данных (`NotesDbContext`).
 - `Models/` — доменная модель (`Note`).
 - `Program.cs` — настройка DI, Swagger и запуск приложения.
+
+
+Swagger: https://localhost:5001/swagger
