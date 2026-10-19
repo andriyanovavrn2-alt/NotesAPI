@@ -1,4 +1,4 @@
 ﻿namespace WUWA_API.Contracts
 {
-    public record GetNotesRequest(string? Serch, string? SortItem, string? SortOrder);
+    public record GetNotesRequest(string? Search, string? SortItem, string? SortOrder);
 }

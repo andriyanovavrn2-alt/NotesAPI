@@ -19,7 +19,7 @@ namespace WUWA_API.DataAccess
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql(_configuration.GetConnectionString("Datebase"));
+            optionsBuilder.UseNpgsql(_configuration.GetConnectionString("Database"));
         }
     }
 }

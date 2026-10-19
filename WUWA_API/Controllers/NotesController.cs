@@ -21,8 +21,8 @@ namespace WUWA_API.Controllers
         public async Task<IActionResult> Get([FromQuery] GetNotesRequest request, CancellationToken ct)
         {
             var notesQuery = _dbContext.Notes
-                .Where(n => string.IsNullOrWhiteSpace(request.Serch) ||
-                n.Title.ToLower().Contains(request.Serch.ToLower()));
+                .Where(n => string.IsNullOrWhiteSpace(request.Search) ||
+                n.Title.ToLower().Contains(request.Search.ToLower()));
 
             Expression<Func<Note, object>> selectorKey = request.SortItem?.ToLower() switch
             {
@@ -46,7 +46,7 @@ namespace WUWA_API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Crerate([FromBody] CreateNoteRequest request, CancellationToken ct)
+        public async Task<IActionResult> Create([FromBody] CreateNoteRequest request, CancellationToken ct)
         {
             var note = new Note(request.Title, request.Description);
 
